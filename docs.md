@@ -11,13 +11,12 @@ Dla uproszczenia, przedstawione poniżej są nazwy kownencji nazewnictwa, które
 - PascalCase - nazwa zaczyna się z dużej litery, każde osobne słowo z dużej litery
 - camelCase - nazwa zaczyna się z małej litery, każde osobne słowo z dużej litery
 - snake_case - nazwy z małych liter, słowa oddzielane podkreślnikiem
-- kebab-case - nazwy z małych liter, słowa oddzielane pauzą
 
 Oraz:
 - Prefix - przedrostek np. "I" dla interfejsów - IDisposable
 - Suffix - przyrostek np. "Exception" dla klas wyjątków - FileNotFoundException
 
-Zaczynając od C#:
+Zaczynając od lepszej Javy:
 - Wszystko co związane z kodem musi być pisane w języku angielskim, również komentarze - wyjątkami są stringi i komunikaty widoczne dla użytkownika
 
 
@@ -39,6 +38,11 @@ public class BankAccount : IDepositable
     public void Deposit(decimal amount)
     {
         _balance -= amount;
+    }
+
+    public override string ToString()
+    {
+        return $"Bank account for {Owner} with balance of {_balance}";
     }
 }
 ```
