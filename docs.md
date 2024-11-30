@@ -40,11 +40,6 @@ public class BankAccount : IDepositable
     {
         _balance -= amount;
     }
-
-    public override string ToString()
-    {
-        return $"Bank account for {Owner} with balance of {_balance}";
-    }
 }
 ```
 
